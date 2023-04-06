@@ -47,19 +47,26 @@ function generatePassword(length, allowedSymbols) {
 // Write password to the #password input
 function writePassword() {
   // Define function parameters
-  
-  let length = getLenght ();
-  let allowedSymbols = getAllowedSymbols();
-  let password = generatePassword(length, allowedSymbols);
-
-  //"test password";//generatePassword();
   var passwordText = document.querySelector("#password");
-  if (password){
-    passwordText.value = password;
-  } else{
+
+  let length = getLenght ();
+  // Validate lenght, if it is not correct - finish funtion and display error
+  if (!length) {
+    passwordText.value = "To generate password: select <Generate Password> button again and" + "enter password length in the range from 8 to 128";
+    passwordText.style.color = "red";
+    return;
+  }
+  let allowedSymbols = getAllowedSymbols();
+    // Validate allowed symbols, if user did not choose any - finish funtion and display error
+  if (!allowedSymbols) 
+  {
     passwordText.value = "To generate password: select <Generate Password> button again and" + "enter password length in the range from 8 to 128 and define allowed symbols";
     passwordText.style.color = "red";
+    return;
   }
+
+  let password = generatePassword(length, allowedSymbols);   // generate password 
+  passwordText.value = password;                             //write password
 }
 
 // Add event listener to generate button
