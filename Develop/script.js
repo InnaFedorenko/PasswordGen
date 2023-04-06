@@ -18,7 +18,6 @@ function getAllowedSymbols(){
     [charactersTypes[2]]: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',        // uppercase
     [charactersTypes[3]]: '!@#$%^&*()_+~`|}{[]\\:;?><,./-='    // special symbols
   };
-
   //Denine variables
   let result = '';
   let characters = '';
@@ -48,8 +47,11 @@ function generatePassword(length, allowedSymbols) {
 function writePassword() {
   // Define function parameters
   var passwordText = document.querySelector("#password");
+  passwordText.style.color = "fieldtext";
+  passwordText.value  = "Your Secure Password";
 
   let length = getLenght ();
+
   // Validate lenght, if it is not correct - finish funtion and display error
   if (!length) {
     passwordText.value = "To generate password: select <Generate Password> button again and" + "enter password length in the range from 8 to 128";

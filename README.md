@@ -4,8 +4,8 @@
 * Date: April 2023
 * Tech stack: HTML, CSS, JS
 * Date: March 2023
-* [Git Repository](https://github.com/InnaFedorenko/portfolio);
-* [Password Generator site](https://innafedorenko.github.io/portfolio/);
+* [Git Repository](https://github.com/InnaFedorenko/PasswordGen);
+* [Password Generator site](https://innafedorenko.github.io/PasswordGen/);
 
 ### Screenshot
 ![Screenshot](innafedorenko.github.io_portfolio_.png)
